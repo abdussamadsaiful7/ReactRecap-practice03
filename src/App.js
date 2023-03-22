@@ -24,13 +24,14 @@ function District (props){
   const [power, setPower]=useState(1);
   const boostPower =() =>{
     const newPower = power*2;
+    setPower(newPower);
   }
   return(
     <div style={districtStyle} className='district'>
       <h2>Name: {props.name} </h2>
       <p>Specialty: {props.specialty} </p>
       <h4>Power: {power} </h4>
-      <button>Boost The Power</button>
+      <button onClick={boostPower}>Boost The Power</button>
     </div>
   )
 }
